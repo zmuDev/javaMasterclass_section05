@@ -1,0 +1,25 @@
+public class Shared {
+    public static boolean hasSharedDigit (int fValue, int sValue){
+        if (fValue < 10 || fValue > 99 ||sValue < 10 || sValue > 99) {
+            return false;
+        }
+        int nset = sValue;
+        while(fValue>0){
+            sValue = nset;
+            while(sValue>0){
+                System.out.println("fValue: " + fValue + " sValue: " + sValue);
+                if(sValue < 10){
+                    if(sValue == (fValue%10)){
+                        return true;
+                    }
+                }
+                if((fValue%10) == (sValue%10)){
+                    return true;
+                }
+                    sValue /= 10;
+                }
+            fValue /= 10;
+        }
+        return false;
+    }
+}
