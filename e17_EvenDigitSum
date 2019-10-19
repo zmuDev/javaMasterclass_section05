@@ -1,0 +1,17 @@
+public class EvenSum {
+    public static int getEvenDigitSum (int number){
+        if (number < 0){
+            return -1;
+        }
+        int sum=0;
+        while (number > 0){
+            int valueR=0;
+            valueR = number%10;
+            if(valueR%2 == 0){
+                sum += valueR;
+            }
+            number /= 10;
+        }
+        return sum;
+    }
+}
