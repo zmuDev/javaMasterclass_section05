@@ -1,0 +1,25 @@
+public static int getGreatestCommonDivisor(int first, int second){
+        if (first <10 || second <10){
+            return -1;
+        }
+        int cDivisor = 1;
+        int min = 0;
+        if(first>=second){
+            min = second;
+        }else{
+            min = first;
+        }
+        int rValue = 0;
+        while(cDivisor<=min){
+            if((first%cDivisor==0) && (second%cDivisor==0)){
+                System.out.println("Common divisor: " + cDivisor);
+                rValue = cDivisor;
+                cDivisor++;
+            }else {
+                System.out.println(cDivisor);
+                cDivisor++;
+            }
+
+        }
+        return rValue;
+    }
