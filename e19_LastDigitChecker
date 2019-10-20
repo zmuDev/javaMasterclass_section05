@@ -1,0 +1,16 @@
+public static boolean hasSameLastDigit (int va, int vb, int vc){
+        if(va < 10 || va > 1000 || vb < 10 || vb > 1000 || vc < 10 || vc > 1000){
+            return false;
+        }else if (va%10 == vb%10 || va%10 == vc%10 || vb%10 == vc%10){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public static boolean isValid(int vd){
+        if(vd >=10 && vd <=1000){
+            return true;
+        }
+        return false;
+    }
