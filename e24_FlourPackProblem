@@ -1,0 +1,23 @@
+public class FPProblem {
+    public static boolean canPack (int bigCount, int smallCount, int goal){
+        if(bigCount < 0 || smallCount <0 || goal <0){
+            return false;
+        }
+
+        //bigCount = 5kg each
+        //smallCount = 1kg each
+
+        if(bigCount*5 + smallCount == goal){
+            return true;
+        }else if((bigCount*5 + smallCount) > goal){
+            if((goal%5) > smallCount){
+                return false;
+            }else {
+                return true;
+            }
+        }
+        else{
+            return false;
+        }
+    }
+}
